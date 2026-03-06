@@ -965,6 +965,11 @@
       </div>
 
       <div class="navWrapper">
+        <button class="hamburger active" id="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <nav class="nav" aria-label="Primary" id="nav">
           <a class="pill active" href="#home" data-route="home">Home</a>
           <a class="pill" href="#cv" data-route="cv">CV</a>
@@ -973,11 +978,6 @@
           <a class="pill" href="#posts" data-route="posts">Posts</a>
           <a class="pill" href="#contact" data-route="contact">Contact</a>
         </nav>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
       </div>
     </div>
   </header>
@@ -1993,11 +1993,11 @@
           <div class="card pad contactBoxGreen" style="box-shadow:none;">
             <h3>Personal Email</h3>
             <p class="muted" style="margin:0 0 14px 0;">
-              <a href="mailto:nyotmanee@gmail.com">nyotmanee@gmail.com</a>
+              <a href="/cdn-cgi/l/email-protection#a2ccdbcdd6cfc3ccc7c7e2c5cfc3cbce8cc1cdcf"><span class="__cf_email__" data-cfemail="620c1b0d160f030c070722050f030b0e4c010d0f">[email&#160;protected]</span></a>
             </p>
             <h3>School Email</h3>
             <p class="muted" style="margin:0;">
-              <a href="mailto:nsyotmanee@wm.edu">nsyotmanee@wm.edu</a>
+              <a href="/cdn-cgi/l/email-protection#18766b61776c7579767d7d586f75367d7c6d"><span class="__cf_email__" data-cfemail="fb958882948f969a959e9ebb8c96d59e9f8e">[email&#160;protected]</span></a>
             </p>
           </div>
 
@@ -2029,7 +2029,7 @@
     </section>
   </main>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     const routes = ["home","cv","research","posts","things","contact"];
     const pages = [...document.querySelectorAll(".page")];
     const navLinks = [...document.querySelectorAll("[data-route]")];
@@ -2267,18 +2267,3 @@
     // Scroll to top and bottom buttons for Things I Love sidebar
     const thingsScrollTop = document.getElementById('thingsScrollTop');
     const thingsScrollBottom = document.getElementById('thingsScrollBottom');
-    
-    if (thingsScrollTop) {
-      thingsScrollTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
-
-    if (thingsScrollBottom) {
-      thingsScrollBottom.addEventListener('click', () => {
-        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-      });
-    }
-  </script>
-</body>
-</html>
