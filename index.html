@@ -215,25 +215,17 @@
         flex-direction: row;
         padding: 0;
         border-bottom: none;
-        max-height: 100%;
-        overflow: visible;
+        max-height: none !important;
+        overflow: visible !important;
         justify-content: flex-end;
         align-items: center;
         width: auto;
         gap: 8px;
+        display: flex !important;
       }
 
       .nav .pill {
         width: auto;
-      }
-
-      .nav:not(.visible) {
-        max-height: 0;
-        overflow: hidden;
-      }
-
-      .nav.visible {
-        max-height: 100%;
       }
     }
 
