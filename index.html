@@ -543,12 +543,22 @@
     @media (min-width: 900px) {
       .heroRow {
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
       }
     }
 
+    .heroPicsContainer{
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+      flex-shrink: 0;
+    }
+
     .heroPic{
-      width: 140px; height: 140px;
+      width: clamp(80px, 12vw, 140px);
+      height: clamp(80px, 12vw, 140px);
       border-radius: 28px;
       border: 1px solid var(--border);
       overflow:hidden;
@@ -570,12 +580,24 @@
       display:block;
     }
 
-    .heroPicsContainer{
+    .heroTextWrapper{
       display: flex;
-      gap: 10px;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      flex-wrap: nowrap;
+      gap: 0;
+      text-align: center;
+    }
+
+    @media (min-width: 900px) {
+      .heroTextWrapper {
+        align-items: flex-start;
+        text-align: left;
+      }
+    }
+
+    .heroTextWrapper h1 {
+      font-size: clamp(20px, 5vw, 30px);
+      white-space: nowrap;
     }
 
     .stack{ display: grid; gap: 0px; }
@@ -974,7 +996,7 @@
                   <img alt="Natasha Yotmanee" src="https://github.com/nyotmanee/nyotmanee.github.io/blob/main/Profile%20Pics/un.png?raw=true" />
                 </div>
               </div>
-              <div style="text-align: center;">
+              <div class="heroTextWrapper">
                 <div class="kicker">International Relations · Data Science · Indo-Pacific</div>
                 <h1>Hi! I'm Natasha Yotmanee <span>(she/her)</span>.</h1>
               </div>
