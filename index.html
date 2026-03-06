@@ -533,12 +533,20 @@
     .tMeta{ color: var(--muted2); font-size: 13px; margin-top: 4px; }
 
     .heroRow{
-      display:flex;
-      gap: 14px;
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      flex-wrap: wrap;
+      gap: 14px;
       margin-bottom: 10px;
     }
+
+    @media (min-width: 900px) {
+      .heroRow {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
     .heroPic{
       width: 140px; height: 140px;
       border-radius: 28px;
@@ -548,6 +556,14 @@
       background: rgba(14,165,166,0.10);
       flex: 0 0 auto;
     }
+
+    @media (max-width: 640px) {
+      .heroPic {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
     .heroPic img{
       width:100%; height:100%;
       object-fit: cover;
@@ -558,6 +574,7 @@
       display: flex;
       gap: 10px;
       align-items: center;
+      justify-content: center;
       flex-wrap: nowrap;
     }
 
@@ -957,7 +974,7 @@
                   <img alt="Natasha Yotmanee" src="https://github.com/nyotmanee/nyotmanee.github.io/blob/main/Profile%20Pics/un.png?raw=true" />
                 </div>
               </div>
-              <div>
+              <div style="text-align: center;">
                 <div class="kicker">International Relations · Data Science · Indo-Pacific</div>
                 <h1>Hi! I'm Natasha Yotmanee <span>(she/her)</span>.</h1>
               </div>
