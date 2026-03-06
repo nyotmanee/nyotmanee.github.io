@@ -208,10 +208,6 @@
     }
 
     @media (min-width: 1000px) {
-      .hamburger {
-        display: none;
-      }
-
       .nav {
         position: static;
         background: transparent;
@@ -219,17 +215,25 @@
         flex-direction: row;
         padding: 0;
         border-bottom: none;
-        max-height: none !important;
-        overflow: visible !important;
+        max-height: 100%;
+        overflow: visible;
         justify-content: flex-end;
         align-items: center;
         width: auto;
         gap: 8px;
-        display: flex !important;
       }
 
       .nav .pill {
         width: auto;
+      }
+
+      .nav:not(.visible) {
+        max-height: 0;
+        overflow: hidden;
+      }
+
+      .nav.visible {
+        max-height: 100%;
       }
     }
 
@@ -275,6 +279,51 @@
     }
     .brandText strong{ font-size: 16px; letter-spacing: 0.2px; }
     .brandText span{ font-size: 12px; color: var(--muted2); }
+
+    .navWrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav{
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 8px;
+      margin: 0;
+    }
+
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
 
     .pill{
       display: inline-flex;
@@ -1569,7 +1618,7 @@
                     <li>Kpop Demon Hunters</li>
                     <li>Now You See Me 1 &amp; 2</li>
                     <li>Pitch Perfect 1, 2, &amp; 3</li>
-                    <li>Fear Street Part 1, 2, &amp; 3</li>
+                    <li>Fear Street Part 1, 2, 3</li>
                     <li>Miss Congeniality</li>
                     <li>Regretting you</li>
                     <li>Kissing is the Easy Part</li>
@@ -1753,7 +1802,7 @@
             <!-- POST 8 -->
             <article class="cardPost" style="min-height: 360px; scroll-snap-align:start;">
               <div class="cardMedia">
-                <img alt="LinkedIn post image" src="https://github.com/nyotmanee/nyotmanee.github.io/blob/main/Linkedin%20Pics/White%20house%20w_%20kaleea.png?raw=true" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
+                <img alt="LinkedIn post image" src="https://github.com/nyotmanee/nyotmanee.github.io/blob/main/Linkedin%20Pics/White%20house%20w%20kaleea.png?raw=true" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
               </div>
               <div class="cardBody">
                 <p class="cardTitle">A Great Day Back in DC</p>
@@ -1867,6 +1916,8 @@
           <span class="muted2"> · </span>
           <a href="#posts" data-route="posts">Posts</a>
           <span class="muted2"> · </span>
+          <a href="#things" data-route="things">Things I Love &amp; Beyond</a>
+          <span class="muted2"> · </span>
           <a href="#contact" data-route="contact">Contact</a>
         </div>
       </footer>
@@ -1884,11 +1935,11 @@
           <div class="card pad contactBoxGreen" style="box-shadow:none;">
             <h3>Personal Email</h3>
             <p class="muted" style="margin:0 0 14px 0;">
-              <a href="/cdn-cgi/l/email-protection#cea0b7a1baa3afa0abab8ea9a3afa7a2e0ada1a3"><span class="__cf_email__" data-cfemail="3d53445249505c5358587d5a505c5451135e5250">[email&#160;protected]</span></a>
+              <a href="mailto:nyotmanee@gmail.com">nyotmanee@gmail.com</a>
             </p>
             <h3>School Email</h3>
             <p class="muted" style="margin:0;">
-              <a href="/cdn-cgi/l/email-protection#d5bba6acbaa1b8b4bbb0b095a2b8fbb0b1a0"><span class="__cf_email__" data-cfemail="5b352822342f363a353e3e1b2c36753e3f2e">[email&#160;protected]</span></a>
+              <a href="mailto:nsyotmanee@wm.edu">nsyotmanee@wm.edu</a>
             </p>
           </div>
 
@@ -2158,3 +2209,18 @@
     // Scroll to top and bottom buttons for Things I Love sidebar
     const thingsScrollTop = document.getElementById('thingsScrollTop');
     const thingsScrollBottom = document.getElementById('thingsScrollBottom');
+    
+    if (thingsScrollTop) {
+      thingsScrollTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    if (thingsScrollBottom) {
+      thingsScrollBottom.addEventListener('click', () => {
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+      });
+    }
+  </script>
+</body>
+</html>
