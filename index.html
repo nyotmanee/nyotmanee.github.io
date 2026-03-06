@@ -868,6 +868,46 @@
       width: 14px;
       height: 14px;
     }
+
+    /* Skills section white boxes */
+    .skillsBoxContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .skillsBoxContainer {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .skillsBox {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+    }
+
+    .skillsBox h3 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      margin: 0 0 10px 0;
+    }
+
+    .skillsBox ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .skillsBox li {
+      margin: 6px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
   </style>
 </head>
 
@@ -925,10 +965,27 @@
           <div style="overflow-x:auto; padding-bottom: 6px; scroll-snap-type:x mandatory;" id="postsScroller">
           <div style="display:grid; grid-auto-flow:column; grid-auto-columns:minmax(260px, 320px); gap:14px; padding:2px;" id="postsGrid">
 
-            <!-- POST 2 - HAPPY FEBRUARY WITH UPDATED IMAGE -->
+            <!-- POST 1 - AND I'M BACK -->
             <article class="cardPost" style="min-height: 360px; scroll-snap-align:start;">
               <div class="cardMedia">
-                <img alt="LinkedIn post image" src="https://raw.githubusercontent.com/nyotmanee/nyotmanee.github.io/refs/heads/main/1.png" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
+                <img alt="LinkedIn post image" src="https://github.com/nyotmanee/nyotmanee.github.io/blob/main/Linkedin%20Pics/13.png?raw=true" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">And I'm back!</p>
+                <p class="cardText caption">
+                  A reflection on six months in Beijing: studying at Tsinghua, continuing Mandarin at BLCU, traveling to about 15 cities, and the friendships and unexpected moments that made the experience unforgettable.
+                </p>
+                <div class="cardFooter">
+                  <span class="mini">LinkedIn · Natasha Yotmanee</span>
+                  <a class="btn op1" href="https://www.linkedin.com/posts/natashayotmanee_and-im-back-after-six-unforgettable-activity-7377392265792524288-ido-" target="_blank" rel="noopener">Open Post ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- POST 2 - HAPPY FEBRUARY -->
+            <article class="cardPost" style="min-height: 360px; scroll-snap-align:start;">
+              <div class="cardMedia">
+                <img alt="LinkedIn post image" src="https://github.com/nyotmanee/nyotmanee.github.io/blob/main/Linkedin%20Pics/WB.png?raw=true" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
               </div>
               <div class="cardBody">
                 <p class="cardTitle">Happy February!</p>
@@ -938,6 +995,193 @@
                 <div class="cardFooter">
                   <span class="mini">LinkedIn · Natasha Yotmanee</span>
                   <a class="btn op2" href="https://www.linkedin.com/posts/natashayotmanee_happy-february-reflecting-on-the-past-activity-7291815029211815936-8Zhu" target="_blank" rel="noopener">Open Post ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- POST 3 - INTERNATIONAL DAY OF WOMEN IN DIPLOMACY -->
+            <article class="cardPost" style="min-height: 360px; scroll-snap-align:start;">
+              <div class="cardMedia">
+                <img alt="LinkedIn post image" src="https://github.com/nyotmanee/nyotmanee.github.io/blob/main/Linkedin%20Pics/undp.png?raw=true" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">International Day of Women in Diplomacy</p>
+                <p class="cardText caption">
+                  Announcing the start of a fellowship with UNDP Crisis Bureau's Risk Anticipation Hub in NYC, with thanks to the team and mentors who made the opportunity possible.
+                </p>
+                <div class="cardFooter">
+                  <span class="mini">LinkedIn · Natasha Yotmanee</span>
+                  <a class="btn op3" href="https://www.linkedin.com/posts/natashayotmanee_undp-crisisbureau-fellow-activity-7211036309379796992-m9Ke" target="_blank" rel="noopener">Open Post ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- POST 4 - THE GRIFFIN HAS LANDED IN BRUSSELS -->
+            <article class="cardPost" style="min-height: 360px; scroll-snap-align:start;">
+              <div class="cardMedia">
+                <img alt="LinkedIn post image" src="https://github.com/nyotmanee/nyotmanee.github.io/blob/main/Linkedin%20Pics/brussels.png?raw=true" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">The Griffin has Landed (in Brussels)</p>
+                <p class="cardText caption">
+                  W&amp;M Global Scholars visited the EU, NATO HQ, and Ukraine's Ambassador in Brussels — covering AI policy, space, and the war in Ukraine — before heading to Paris.
+                </p>
+                <div class="cardFooter">
+                  <span class="mini">LinkedIn · Shared</span>
+                  <a class="btn op4" href="https://www.linkedin.com/posts/mike-tierney-694a3856_the-griffin-has-landed-in-brussels-and-ugcPost-7173641420556152832-mH67" target="_blank" rel="noopener">Open Post ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- POST 5 - VISITED NORFOLK NAVAL BASE -->
+            <article class="cardPost" style="min-height: 360px; scroll-snap-align:start;">
+              <div class="cardMedia">
+                <img alt="LinkedIn post image" src="https://github.com/nyotmanee/nyotmanee.github.io/blob/main/Linkedin%20Pics/heli.png?raw=true" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">Visited Norfolk Naval Base</p>
+                <p class="cardText caption">
+                  The Global Scholars cohort visited Norfolk Naval Base to meet with Naval Air Force Atlantic and NATO Allied Command instructors ahead of the Brussels and Paris trip.
+                </p>
+                <div class="cardFooter">
+                  <span class="mini">LinkedIn · Shared</span>
+                  <a class="btn op1" href="https://www.linkedin.com/posts/kaleea-korunka_my-global-scholars-cohort-and-i-recently-ugcPost-7170439711038136321-aXQt" target="_blank" rel="noopener">Open Post ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- POST 6 - GLOBAL SCHOLARS PROGRAM IN DC -->
+            <article class="cardPost" style="min-height: 360px; scroll-snap-align:start;">
+              <div class="cardMedia">
+                <img alt="LinkedIn post image" src="https://github.com/nyotmanee/nyotmanee.github.io/blob/main/Linkedin%20Pics/WB%20Meeting.png?raw=true" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">Global Scholars Program in DC</p>
+                <p class="cardText caption">
+                  Two weeks in Washington D.C. with W&amp;M Global Scholars: visits to the Senate Foreign Relations Committee, World Bank, BASF, and the White House, connecting classroom learning to U.S. foreign policy.
+                </p>
+                <div class="cardFooter">
+                  <span class="mini">LinkedIn · Shared</span>
+                  <a class="btn op2" href="https://www.linkedin.com/posts/mike-tierney-694a3856_for-the-past-2-weeks-william-mary-students-ugcPost-7154577984773832704-W3qa" target="_blank" rel="noopener">Open Post ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- POST 7 - SASHA BAKER SPOKE WITH GLOBAL SCHOLARS -->
+            <article class="cardPost" style="min-height: 360px; scroll-snap-align:start;">
+              <div class="cardMedia">
+                <img alt="LinkedIn post image" src="https://github.com/nyotmanee/nyotmanee.github.io/blob/main/Linkedin%20Pics/Pentagon.png?raw=true" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">Sasha Baker spoke with Global Scholars</p>
+                <p class="cardText caption">
+                  Acting Under Secretary of Defense Sasha Baker shared insights on national security and the National Defense Strategy with W&amp;M Global Scholars, engaging future foreign policy leaders.
+                </p>
+                <div class="cardFooter">
+                  <span class="mini">LinkedIn · Shared</span>
+                  <a class="btn op3" href="https://www.linkedin.com/posts/office-of-the-under-secretary-of-war-for-policy_ms-sasha-baker-acting-under-secretary-of-ugcPost-7151776456820346880-o-_J" target="_blank" rel="noopener">Open Post ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- POST 8 - A GREAT DAY BACK IN DC -->
+            <article class="cardPost" style="min-height: 360px; scroll-snap-align:start;">
+              <div class="cardMedia">
+                <img alt="LinkedIn post image" src="https://github.com/nyotmanee/nyotmanee.github.io/blob/main/Linkedin%20Pics/White%20house%20w_%20kaleea.png?raw=true" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">A Great Day Back in DC</p>
+                <p class="cardText caption">
+                  A DC day with Global Scholars: visits to Arnold &amp; Porter, the Capitol, Sen. Warner's intelligence staff, and a panel with Rear Admiral Studeman — plus quality time with mentors and W&amp;M alums.
+                </p>
+                <div class="cardFooter">
+                  <span class="mini">LinkedIn · Natasha Yotmanee</span>
+                  <a class="btn op4" href="https://www.linkedin.com/posts/natashayotmanee_it-was-a-great-day-to-be-back-in-dc-this-activity-7128453792643104768-4s38" target="_blank" rel="noopener">Open Post ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- POST 9 - WRAPPING UP TANIP AT THE ROYAL THAI EMBASSY -->
+            <article class="cardPost" style="min-height: 360px; scroll-snap-align:start;">
+              <div class="cardMedia">
+                <img alt="LinkedIn post image" src="https://github.com/nyotmanee/nyotmanee.github.io/blob/main/Linkedin%20Pics/tanip%20cohort%20pic.png?raw=true" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">Wrapping Up TANIP at the Royal Thai Embassy</p>
+                <p class="cardText caption">
+                  Reflecting on a summer with the Thai-American National Internship Program: working on public relations, policy memos, and the Sawasdee DC festival, and deepening ties to Thai heritage.
+                </p>
+                <div class="cardFooter">
+                  <span class="mini">LinkedIn · Natasha Yotmanee</span>
+                  <a class="btn op1" href="https://www.linkedin.com/posts/natashayotmanee_tanip-thailand-internship-activity-7104977345261801472-KV7_" target="_blank" rel="noopener">Open Post ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- POST 10 - WRAPPING UP AT THE EAST-WEST CENTER -->
+            <article class="cardPost" style="min-height: 360px; scroll-snap-align:start;">
+              <div class="cardMedia">
+                <img alt="LinkedIn post image" src="https://github.com/nyotmanee/nyotmanee.github.io/blob/main/Linkedin%20Pics/white%20house.png?raw=true" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">Wrapping Up at the East-West Center</p>
+                <p class="cardText caption">
+                  Ten weeks with the East-West Center's Young Professionals Program: contributing to the ASEAN Matters for America publication, working alongside an incredible team, and making lasting memories with fellow YPPs.
+                </p>
+                <div class="cardFooter">
+                  <span class="mini">LinkedIn · Natasha Yotmanee</span>
+                  <a class="btn op2" href="https://www.linkedin.com/posts/natashayotmanee_internship-eastwestcenter-indopacific-activity-7102723056388775936-LlzE" target="_blank" rel="noopener">Open Post ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- POST 11 - TANIP & IMPACT! GRADUATION -->
+            <article class="cardPost" style="min-height: 360px; scroll-snap-align:start;">
+              <div class="cardMedia">
+                <img alt="LinkedIn post image" src="https://github.com/nyotmanee/nyotmanee.github.io/blob/main/Linkedin%20Pics/TANIP%20Grad.png?raw=true" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">TANIP &amp; IMPACT! Graduation</p>
+                <p class="cardText caption">
+                  Congratulations to East-West Center Young Professionals Joseph Maga and Natasha Yotmanee on completing TANIP, and to Beatrice Windorski on completing the IMPACT! Filipino-American National Internship Program.
+                </p>
+                <div class="cardFooter">
+                  <span class="mini">LinkedIn · Shared</span>
+                  <a class="btn op3" href="https://www.linkedin.com/feed/update/urn:li:activity:7093308407557836801" target="_blank" rel="noopener">Open Post ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- POST 12 - LUNCH WITH AMBASSADOR TANEE SANGRAT -->
+            <article class="cardPost" style="min-height: 360px; scroll-snap-align:start;">
+              <div class="cardMedia">
+                <img alt="LinkedIn post image" src="https://github.com/nyotmanee/nyotmanee.github.io/blob/main/Linkedin%20Pics/amb.png?raw=true" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">Lunch with Ambassador Tanee Sangrat</p>
+                <p class="cardText caption">
+                  As part of TANIP, had the opportunity to have lunch with Thai Ambassador Tanee Sangrat at his residence for meaningful conversations about Thailand–U.S. relations.
+                </p>
+                <div class="cardFooter">
+                  <span class="mini">LinkedIn · Natasha Yotmanee</span>
+                  <a class="btn op4" href="https://www.linkedin.com/posts/natashayotmanee_tanip-thailand-internship-activity-7087160356317384704-cZwi" target="_blank" rel="noopener">Open Post ↗</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- POST 13 - WEEK ONE AT THE EAST-WEST CENTER -->
+            <article class="cardPost" style="min-height: 360px; scroll-snap-align:start;">
+              <div class="cardMedia">
+                <img alt="LinkedIn post image" src="https://github.com/nyotmanee/nyotmanee.github.io/blob/main/Linkedin%20Pics/white%20house%20(2).png?raw=true" referrerpolicy="no-referrer" loading="lazy" onerror="this.style.display='none';" />
+              </div>
+              <div class="cardBody">
+                <p class="cardTitle">Week One at the East-West Center</p>
+                <p class="cardText caption">
+                  Kicking off the EWC Young Professionals Program: researching ASEAN Matters for America, attending events at CSIS, Carnegie, APIAVote, and the White House arrival ceremony for India PM Modi.
+                </p>
+                <div class="cardFooter">
+                  <span class="mini">LinkedIn · Natasha Yotmanee</span>
+                  <a class="btn op1" href="https://www.linkedin.com/posts/natashayotmanee_internship-activity-7080029375097683968-xW76" target="_blank" rel="noopener">Open Post ↗</a>
                 </div>
               </div>
             </article>
