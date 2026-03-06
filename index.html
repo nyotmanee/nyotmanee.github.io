@@ -134,7 +134,7 @@
     }
 
     .hamburger {
-      display: flex;
+      display: none;
       flex-direction: column;
       gap: 5px;
       cursor: pointer;
@@ -142,6 +142,10 @@
       border: none;
       padding: 8px;
       margin: 0;
+    }
+
+    .hamburger.show {
+      display: flex;
     }
 
     .hamburger span {
@@ -180,6 +184,8 @@
       display: flex;
       align-items: center;
       gap: 8px;
+      flex-grow: 1;
+      justify-content: flex-end;
     }
 
     .nav {
@@ -189,164 +195,48 @@
       flex-wrap: wrap;
       justify-content: flex-end;
       transition: max-height 0.3s ease;
-    }
-
-    @media (max-width: 999px) {
-      .nav {
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        background: rgba(255,255,255,0.95);
-        backdrop-filter: blur(10px);
-        flex-direction: column;
-        padding: 12px;
-        border-bottom: 1px solid var(--border);
-        max-height: 0;
-        overflow: hidden;
-        justify-content: flex-start;
-        align-items: stretch;
-        width: 100%;
-        gap: 4px;
-      }
-
-      .nav.visible {
-        max-height: 500px;
-      }
-
-      .nav .pill {
-        width: 100%;
-      }
-    }
-
-    @media (min-width: 1000px) {
-      .nav {
-        position: static;
-        background: transparent;
-        backdrop-filter: none;
-        flex-direction: row;
-        padding: 0;
-        border-bottom: none;
-        max-height: 100%;
-        overflow: visible;
-        justify-content: flex-end;
-        align-items: center;
-        width: auto;
-        gap: 8px;
-      }
-
-      .nav .pill {
-        width: auto;
-      }
-
-      .nav:not(.visible) {
-        max-height: 0;
-        overflow: hidden;
-      }
-
-      .nav.visible {
-        max-height: 100%;
-      }
-    }
-
-    /* Offset anchor scroll targets so the sticky header never covers them */
-    [id]{
-      scroll-margin-top: 80px;
-    }
-    .topbarInner{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 12px 18px;
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .brand{
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      min-width: 240px;
-      flex: 1;
-    }
-    .avatar{
-      width: 38px; height: 38px;
-      border-radius: 14px;
-      border: 1px solid var(--border);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      background: linear-gradient(135deg, rgba(14,165,166,0.18), rgba(37,99,235,0.18));
-      flex: 0 0 auto;
-    }
-    .avatar img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display:block;
-    }
-    .brandText{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .brandText strong{ font-size: 16px; letter-spacing: 0.2px; }
-    .brandText span{ font-size: 12px; color: var(--muted2); }
-
-    .navWrapper {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .nav{
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    .hamburger {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      background: none;
+      max-height: 100%;
+      overflow: visible;
+      flex-direction: row;
+      width: auto;
+      background: transparent;
+      backdrop-filter: none;
+      padding: 0;
       border: none;
-      padding: 8px;
-      margin: 0;
+      position: static;
     }
 
-    .hamburger span {
-      width: 24px;
-      height: 2px;
-      background: var(--text);
-      border-radius: 2px;
-      transition: all 0.3s ease;
+    /* Hidden state for navigation when it would wrap */
+    .nav.hidden-by-layout {
+      display: none;
     }
 
-    .hamburger span:nth-child(1) {
-      transform: rotate(45deg) translate(8px, 8px);
+    /* Mobile/small screen: hamburger visible, nav hidden by default */
+    .hamburger.show ~ .nav {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      flex-direction: column;
+      padding: 12px;
+      border-bottom: 1px solid var(--border);
+      width: 100%;
+      gap: 4px;
+      max-height: 0;
+      overflow: hidden;
+      justify-content: flex-start;
+      align-items: stretch;
+      transition: max-height 0.3s ease;
     }
 
-    .hamburger span:nth-child(2) {
-      opacity: 0;
+    .hamburger.show ~ .nav.visible {
+      max-height: 500px;
     }
 
-    .hamburger span:nth-child(3) {
-      transform: rotate(-45deg) translate(7px, -7px);
-    }
-
-    .hamburger.active span:nth-child(1) {
-      transform: rotate(0deg) translate(0px, 0px);
-    }
-
-    .hamburger.active span:nth-child(2) {
-      opacity: 1;
-    }
-
-    .hamburger.active span:nth-child(3) {
-      transform: rotate(0deg) translate(0px, 0px);
+    .hamburger.show ~ .nav .pill {
+      width: 100%;
     }
 
     .pill{
@@ -373,6 +263,49 @@
       background: var(--activeTabBg);
       border-color: var(--activeTabBd);
     }
+
+    /* Offset anchor scroll targets so the sticky header never covers them */
+    [id]{
+      scroll-margin-top: 80px;
+    }
+    .topbarInner{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 12px 18px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand{
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      min-width: 240px;
+      flex: 0 0 auto;
+    }
+    .avatar{
+      width: 38px; height: 38px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: linear-gradient(135deg, rgba(14,165,166,0.18), rgba(37,99,235,0.18));
+      flex: 0 0 auto;
+    }
+    .avatar img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display:block;
+    }
+    .brandText{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .brandText strong{ font-size: 16px; letter-spacing: 0.2px; }
+    .brandText span{ font-size: 12px; color: var(--muted2); }
 
     .page{ display: none; padding-top: 20px; }
     .page.active{ display: block; }
@@ -970,6 +903,11 @@
       </div>
 
       <div class="navWrapper">
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <nav class="nav visible" aria-label="Primary" id="nav">
           <a class="pill active" href="#home" data-route="home">Home</a>
           <a class="pill" href="#cv" data-route="cv">CV</a>
@@ -978,11 +916,6 @@
           <a class="pill" href="#posts" data-route="posts">Posts</a>
           <a class="pill" href="#contact" data-route="contact">Contact</a>
         </nav>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
       </div>
     </div>
   </header>
@@ -1986,7 +1919,7 @@
       </footer>
     </section>
 
-    <!-- THINGS I LOVE & BEYOND -->
+    <!-- CONTACT -->
     <section class="page" id="page-contact" data-page="contact">
       <div class="card pad">
         <h1>Contact</h1>
@@ -2052,6 +1985,36 @@
       setActiveRoute(hash);
     }
 
+    // Responsive navigation toggle based on layout behavior
+    function checkNavLayout() {
+      if (!nav || !hamburger) return;
+
+      // Measure if the nav items fit in a single row
+      const navContainer = nav.parentElement;
+      const navRect = nav.getBoundingClientRect();
+      const containerRect = navContainer.getBoundingClientRect();
+
+      // If nav is wider than its container or any item wraps, show hamburger
+      const doesWrap = navRect.width > containerRect.width * 0.85; // 85% threshold to account for padding
+
+      if (doesWrap) {
+        hamburger.classList.add("show");
+        nav.classList.add("hidden-by-layout");
+        nav.classList.remove("visible");
+      } else {
+        hamburger.classList.remove("show");
+        nav.classList.remove("hidden-by-layout");
+        nav.classList.add("visible");
+      }
+    }
+
+    // Initial check and recheck on resize
+    window.addEventListener("load", checkNavLayout, { passive: true });
+    window.addEventListener("resize", checkNavLayout, { passive: true });
+    
+    // Check frequently in case dynamic content changes
+    const layoutCheckInterval = setInterval(checkNavLayout, 500);
+
     // Hamburger menu toggle
     if (hamburger) {
       hamburger.addEventListener("click", () => {
@@ -2060,12 +2023,13 @@
       });
     }
 
-    // Close menu when clicking on a link (only on mobile)
+    // Close menu when clicking on a link
     if (nav) {
       nav.querySelectorAll("a").forEach(link => {
         link.addEventListener("click", () => {
-          // Only close menu on screens under 1000px
-          if (window.innerWidth < 1000) {
+          // Check if nav should be hidden by layout
+          const isHiddenByLayout = nav.classList.contains("hidden-by-layout");
+          if (isHiddenByLayout) {
             hamburger.classList.remove("active");
             nav.classList.remove("visible");
           }
@@ -2253,37 +2217,10 @@
       setInterval(updateActiveThingsSidebarLink, 500);
     }
 
-    // Scroll to top and bottom buttons for CV sidebar
-    const cvScrollTop = document.getElementById('cvScrollTop');
-    const cvScrollBottom = document.getElementById('cvScrollBottom');
-    
-    if (cvScrollTop) {
-      cvScrollTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
-
-    if (cvScrollBottom) {
-      cvScrollBottom.addEventListener('click', () => {
-        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-      });
-    }
-
-    // Scroll to top and bottom buttons for Things I Love sidebar
-    const thingsScrollTop = document.getElementById('thingsScrollTop');
-    const thingsScrollBottom = document.getElementById('thingsScrollBottom');
-    
-    if (thingsScrollTop) {
-      thingsScrollTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
-
-    if (thingsScrollBottom) {
-      thingsScrollBottom.addEventListener('click', () => {
-        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-      });
-    }
+    // Cleanup: clear interval on page unload
+    window.addEventListener('beforeunload', () => {
+      clearInterval(layoutCheckInterval);
+    });
   </script>
 </body>
 </html>
