@@ -192,10 +192,6 @@
     }
 
     @media (max-width: 999px) {
-      .hamburger {
-        display: flex;
-      }
-
       .nav {
         position: absolute;
         top: 70px;
@@ -224,10 +220,6 @@
     }
 
     @media (min-width: 1000px) {
-      .hamburger {
-        display: none;
-      }
-
       .nav {
         position: static;
         background: transparent;
@@ -245,6 +237,15 @@
 
       .nav .pill {
         width: auto;
+      }
+
+      .nav:not(.visible) {
+        max-height: 0;
+        overflow: hidden;
+      }
+
+      .nav.visible {
+        max-height: 100%;
       }
     }
 
@@ -969,7 +970,7 @@
       </div>
 
       <div class="navWrapper">
-        <nav class="nav" aria-label="Primary" id="nav">
+        <nav class="nav visible" aria-label="Primary" id="nav">
           <a class="pill active" href="#home" data-route="home">Home</a>
           <a class="pill" href="#cv" data-route="cv">CV</a>
           <a class="pill" href="#research" data-route="research">Research &amp; Publications</a>
