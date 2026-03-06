@@ -371,7 +371,21 @@
       margin: 0 0 8px;
       font-size: 30px;
       letter-spacing: -0.4px;
+      white-space: nowrap;
     }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 22px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 18px;
+      }
+    }
+
     h2{
       margin: 0 0 10px;
       font-size: 18px;
@@ -538,13 +552,6 @@
       align-items: center;
       gap: 14px;
       margin-bottom: 10px;
-    }
-
-    @media (min-width: 900px) {
-      .heroRow {
-        flex-direction: row;
-        align-items: center;
-      }
     }
 
     .heroPic{
@@ -976,7 +983,7 @@
               </div>
               <div style="text-align: center;">
                 <div class="kicker">International Relations · Data Science · Indo-Pacific</div>
-                <h1>Hi! I'm Natasha Yotmanee <span>(she/her)</span>.</h1>
+                <h1>Hi! I'm Natasha Yotmanee (she/her).</h1>
               </div>
             </div>
 
