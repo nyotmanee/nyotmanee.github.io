@@ -134,7 +134,7 @@
     }
 
     .hamburger {
-      display: none;
+      display: flex;
       flex-direction: column;
       gap: 5px;
       cursor: pointer;
@@ -246,14 +246,6 @@
       .nav .pill {
         width: auto;
       }
-
-      .nav:not(.visible) {
-        max-height: 100%;
-      }
-
-      .nav.visible {
-        max-height: 100%;
-      }
     }
 
     /* Offset anchor scroll targets so the sticky header never covers them */
@@ -314,7 +306,7 @@
     }
 
     .hamburger {
-      display: none;
+      display: flex;
       flex-direction: column;
       gap: 5px;
       cursor: pointer;
