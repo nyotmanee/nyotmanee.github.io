@@ -1147,7 +1147,14 @@
     #page-cv .tItem .muted{ color: #334155; font-size: 15px; }
     #page-cv .cvSubTitle{ font-size: 16.5px; }
     #page-cv .list{ color: #334155; font-size: 15px; }
-    #page-cv .when{ display: inline-block; color: var(--btnTx); font-size: 13px; line-height: 1.35; text-align: center; padding: 10px 12px; border: 1px solid var(--btnBd); background: var(--btnBg); border-radius: 12px; box-shadow: 0 6px 14px rgba(15,23,42,0.06); }
+    #page-cv .when{ display: inline-block; color: #64748b; font-size: 13px; line-height: 1.35; text-align: center; padding: 10px 12px; border: 1px solid var(--border); background: #ffffff; border-radius: 12px; box-shadow: 0 6px 14px rgba(15,23,42,0.06); }
+    #page-cv .tTop{ display: grid; grid-template-columns: minmax(0, 1fr) max-content; align-items: start; gap: 12px; }
+    #page-cv .tTop > div:first-child{ min-width: 0; }
+    #page-cv .when{ justify-self: end; }
+    @media (max-width: 640px) {
+      #page-cv .tTop{ grid-template-columns: 1fr; }
+      #page-cv .when{ justify-self: start; }
+    }
 
 
 
@@ -1436,8 +1443,8 @@
 
 
     .whiteSection{ background: #ffffff; box-shadow: var(--shadow); }
-    .researchSection{ background: var(--researchCardBg); border-color: var(--researchCardBd); }
-    .pubSection{ background: var(--pubCardBg); border-color: var(--pubCardBd); }
+    .researchSection{ background: rgba(59,130,246,0.06); border-color: rgba(59,130,246,0.20); }
+    .pubSection{ background: rgba(14,165,166,0.06); border-color: rgba(14,165,166,0.20); }
 
     .researchCard{
 
@@ -1454,6 +1461,8 @@
       border-color: var(--border);
 
     }
+
+    #page-research .stack{ gap: 12px; }
 
 
 
@@ -2756,29 +2765,31 @@
 
     <section class="page" id="page-research" data-page="research">
 
-      <div class="grid cols2">
+      <div class="card pad whiteSection">
 
-        <div class="card pad researchSection">
+        <div class="sectionHead">
 
-          <div class="sectionHead">
+          <div>
 
-            <div>
+            <h1>Research &amp; Publications</h1>
 
-              <h1>Research &amp; Publications</h1>
-
-              <p class="muted">Current research and selected writing.</p>
-
-            </div>
+            <p class="muted">Current research and selected writing.</p>
 
           </div>
 
-
-
-          <div class="divider"></div>
+        </div>
 
 
 
-          <h2>Current Research</h2>
+        <div class="divider"></div>
+
+
+
+        <div class="grid cols2">
+
+          <div class="card pad researchSection">
+
+            <h2>Current Research</h2>
 
 
 
@@ -2840,7 +2851,8 @@
 
 
 
-        <aside class="card pad pubSection">
+
+          <aside class="card pad pubSection">
 
           <h2>Selected Publications</h2>
 
@@ -2920,7 +2932,9 @@
 
           </div>
 
-        </aside>
+          </aside>
+
+        </div>
 
       </div>
 
