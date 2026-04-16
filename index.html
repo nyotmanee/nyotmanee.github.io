@@ -1163,6 +1163,31 @@
       #page-cv .when{ justify-self: start; }
     }
 
+    .contactIntro{
+      display: grid;
+      grid-template-columns: 150px minmax(0, 1fr);
+      align-items: center;
+      gap: 18px;
+    }
+    .contactIntroImg{
+      width: 150px;
+      aspect-ratio: 1;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      background: #ffffff;
+    }
+    .contactIntroImg img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    @media (max-width: 640px) {
+      .contactIntro{ grid-template-columns: 1fr; }
+    }
+
 
 
     .heroRow{
@@ -2450,7 +2475,7 @@
 
                         <h3>Ukraine War Study Intern</h3>
 
-                        <div class="tMeta cvSubTitle"><em>Strategic Studies Institute, US Army War College (USAWC)</em></div>
+                        <div class="tMeta cvSubTitle"><em>Strategic Studies Institute, U.S. Army War College (USAWC)</em></div>
 
                       </div>
 
@@ -2806,6 +2831,38 @@
 
               <div class="cardBody">
 
+                <p class="cardTitle">Why States Hedge Differently</p>
+
+                <p class="cardText">
+
+                  Examines why Southeast Asian states adopt different hedging strategies in response to U.S.-China competition, focusing on how systemic pressures and domestic political constraints shape variation in their foreign policy choices.
+
+                </p>
+
+                <p class="cardText">
+
+                  <strong>Currently working on:</strong> Building a classification model, with support from generative AI tools, to predict Southeast Asian countries&rsquo; foreign policy behavior (hedging, semi-hedging, or aligning) using economic, security, political, and domestic factors.
+
+                </p>
+
+                <div class="cardFooter">
+
+                  <span class="mini">Personal Research</span>
+
+                  <a class="btn rc" href="#contact" data-route="contact">Connect with Me! ↗</a>
+
+                </div>
+
+              </div>
+
+            </article>
+
+
+
+            <article class="cardPost researchCard">
+
+              <div class="cardBody">
+
                 <p class="cardTitle">Politics of Recognition and the Case of One China</p>
 
                 <p class="cardText">
@@ -2832,7 +2889,7 @@
 
               <div class="cardBody">
 
-                <p class="cardTitle">Storied States (Asia Policy Lab)</p>
+                <p class="cardTitle">Storied States</p>
 
                 <p class="cardText">
 
@@ -2921,7 +2978,7 @@
 
               <div class="cardBody">
 
-                <p class="cardTitle">Sawasdee Festival: Celebrating the 190th Anniversary of US-Thai Relations</p>
+                <p class="cardTitle">Sawasdee Festival: Celebrating the 190th Anniversary of U.S.-Thai Relations</p>
 
                 <p class="cardText">Highlights from a cultural festival marking a milestone in U.S.–Thai relations.</p>
 
@@ -3019,7 +3076,7 @@
 
             <h1>Things I Love &amp; Beyond</h1>
 
-            <p class="muted">A collection of the things that bring me joy.</p>
+            <p class="muted">A collection of the things that bring me joy!</p>
 
 
 
@@ -3041,15 +3098,17 @@
 
                     <li><a href="https://www.wm.edu/about/visiting/campus-landmarks/lake-matoaka/" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">W&amp;M zip line!</a> (I didn't even know we had one)</li>
 
-                    <li><a href="https://www.instagram.com/p/DUdtxe2gM6B/?igsh=Mnh3Nmxic2Q0NmFo" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">Natasha Bedingfield &amp; B.o.B concert!</a></li>
+                    <li style="list-style-type:none;">✓ <a href="https://www.instagram.com/p/DUdtxe2gM6B/?igsh=Mnh3Nmxic2Q0NmFo" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">Natasha Bedingfield &amp; B.o.B concert!</a></li>
 
                     <li>Visit <a href="https://muscarelle.wm.edu/" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">Muscarelle Museum</a> and <a href="https://libraries.wm.edu/libraries-spaces/special-collections" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">W&amp;M Archives/Special Collections</a></li>
 
                     <li>Explore <a href="https://scrc-kb.libraries.wm.edu/underground-steam-tunnels" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">W&amp;M underground tunnels</a> and <a href="https://research.colonialwilliamsburg.org/DigitalLibrary/view/index.cfm?doc=ResearchReports%5CRR0197.xml&highlight=" target="_blank" rel="noopener" style="text-decoration: underline; color: #003d82;">crypt</a>??</li>
 
-                    <li>Beach day with friends!</li>
+                    <li style="list-style-type:none;">✓ Beach day with friends!</li>
 
-                    <li>Stargazing &amp; Picnic!</li>
+                    <li style="list-style-type:none;">✓ Stargazing!</li>
+
+                    <li style="list-style-type:none;">✓ Picnic!</li>
 
                     <li>Richmond Day Trip!</li>
 
@@ -3942,9 +4001,23 @@
 
       <div class="card pad">
 
-        <h1>Contact</h1>
+        <div class="contactIntro">
 
-        <p class="muted">If you'd like to collaborate or connect, reach out here:</p>
+          <div class="contactIntroImg">
+
+            <img alt="Natasha Yotmanee" src="https://github.com/nyotmanee/nyotmanee.github.io/blob/main/Profile%20Pics/datong.png?raw=true" />
+
+          </div>
+
+          <div>
+
+            <h1>Contact</h1>
+
+            <p class="muted">If you'd like to collaborate or connect, reach out here:</p>
+
+          </div>
+
+        </div>
 
 
 
