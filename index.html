@@ -784,11 +784,31 @@
 
     .grid{ display: grid; gap: 16px; }
 
+    .homeLayout{
+
+      display: grid;
+
+      gap: 16px;
+
+    }
+
+    .homeBottom{
+
+      display: grid;
+
+      gap: 16px;
+
+      align-items: start;
+
+    }
+
     @media (min-width: 900px){
 
       .grid.cols2{ grid-template-columns: 1.1fr 0.9fr; }
 
       .grid.cols2even{ grid-template-columns: 1fr 1fr; }
+
+      .homeBottom{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
     }
 
@@ -2046,9 +2066,7 @@
 
     <section class="page active" id="page-home" data-page="home">
 
-      <div class="grid cols2">
-
-        <div class="grid">
+      <div class="homeLayout">
 
           <div class="card pad">
 
@@ -2105,7 +2123,7 @@
             </p>
           </div>
 
-
+        <div class="homeBottom">
 
           <div class="card pad">
 
@@ -2136,12 +2154,6 @@
             </ul>
 
           </div>
-
-        </div>
-
-
-
-        <div class="stack">
 
           <aside class="card pad" style="height: fit-content;">
 
