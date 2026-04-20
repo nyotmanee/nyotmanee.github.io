@@ -1230,7 +1230,7 @@
 
       display: grid;
 
-      grid-template-columns: minmax(220px, 320px) minmax(0, 1fr);
+      grid-template-columns: minmax(240px, 360px) minmax(0, 1fr);
 
       align-items: center;
 
@@ -1242,13 +1242,21 @@
 
     .heroRow h1{ white-space: normal; }
 
+    .heroCopy{
+
+      align-self: center;
+
+      max-width: 620px;
+
+    }
+
 
 
     .heroPic{
 
       width: 100%;
 
-      max-width: 320px;
+      max-width: 360px;
 
       aspect-ratio: 1;
 
@@ -1283,6 +1291,12 @@
         max-width: 220px;
 
         justify-self: center;
+
+      }
+
+      .heroCopy {
+
+        max-width: none;
 
       }
 
@@ -2100,7 +2114,7 @@
 
               </div>
 
-              <div>
+              <div class="heroCopy">
 
                 <h1>Hi! I'm Natasha Yotmanee (she/her).</h1>
 
