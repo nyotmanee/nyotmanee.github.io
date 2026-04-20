@@ -1250,6 +1250,40 @@
 
     .heroRow h1{ white-space: normal; }
 
+    .typewriter{
+
+      display: inline-block;
+
+      min-height: 1.2em;
+
+    }
+
+    .typewriter.isTyping::after{
+
+      content: "";
+
+      display: inline-block;
+
+      width: 2px;
+
+      height: 0.95em;
+
+      margin-left: 3px;
+
+      background: var(--text);
+
+      vertical-align: -0.08em;
+
+      animation: caretBlink 0.75s step-end infinite;
+
+    }
+
+    @keyframes caretBlink{
+
+      50%{ opacity: 0; }
+
+    }
+
     .heroCopy{
 
       align-self: center;
@@ -2130,7 +2164,7 @@
 
               <div class="heroCopy">
 
-                <h1>Hi! I'm Natasha Yotmanee (she/her).</h1>
+                <h1 class="typewriter" data-type-text="Hi! I'm Natasha Yotmanee."></h1>
 
                 <p>
 
@@ -4240,6 +4274,36 @@
     window.addEventListener("hashchange", onHashChange);
 
     onHashChange();
+
+
+
+    const typewriter = document.querySelector(".typewriter[data-type-text]");
+
+    if (typewriter) {
+
+      const text = typewriter.dataset.typeText || "";
+
+      typewriter.textContent = "";
+
+      typewriter.classList.add("isTyping");
+
+      [...text].forEach((char, index) => {
+
+        setTimeout(() => {
+
+          typewriter.textContent += char;
+
+          if (index === text.length - 1) {
+
+            typewriter.classList.remove("isTyping");
+
+          }
+
+        }, index * 65);
+
+      });
+
+    }
 
 
 
