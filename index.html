@@ -580,7 +580,46 @@
 
     }
 
-    .brandText{
+    
+    .homeButton{
+
+      position: relative;
+
+    }
+
+    .homeButtonImg{
+
+      position: absolute;
+
+      inset: 0;
+
+      transition: opacity 0.18s ease;
+
+    }
+
+    .homeButtonImgHover{
+
+      opacity: 0;
+
+    }
+
+    .brand a:hover .homeButtonImgDefault,
+
+    .brand a:focus-visible .homeButtonImgDefault{
+
+      opacity: 0;
+
+    }
+
+    .brand a:hover .homeButtonImgHover,
+
+    .brand a:focus-visible .homeButtonImgHover{
+
+      opacity: 1;
+
+    }
+
+.brandText{
 
       display: flex;
 
@@ -2084,9 +2123,11 @@
 
         <a href="#home" data-route="home" style="display: flex; gap: 12px; align-items: center; text-decoration: none; color: inherit;">
 
-          <div class="avatar" aria-hidden="true">
+          <div class="avatar homeButton" aria-hidden="true">
 
-            <img alt="Natasha Yotmanee" src="https://github.com/nyotmanee/nyotmanee.github.io/blob/main/Profile%20Pics/datong.png?raw=true" />
+            <img class="homeButtonImg homeButtonImgDefault" alt="Natasha Yotmanee home" src="https://github.com/nyotmanee/nyotmanee.github.io/blob/ce5e565fe5b967c89d43d8e83839e11014f8d296/button/smile.png?raw=true" />
+
+            <img class="homeButtonImg homeButtonImgHover" alt="" src="https://github.com/nyotmanee/nyotmanee.github.io/blob/ce5e565fe5b967c89d43d8e83839e11014f8d296/button/double%20wink.png?raw=true" />
 
           </div>
 
