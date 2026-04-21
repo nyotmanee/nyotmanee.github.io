@@ -534,7 +534,7 @@
 
       margin: 0 auto;
 
-      padding: 12px 18px;
+      padding: 6px 18px;
 
       display: flex;
 
@@ -593,9 +593,9 @@
     
     .homeButton{
 
-      width: 50px;
+      width: 46px;
 
-      height: 50px;
+      height: 46px;
 
       position: relative;
 
@@ -655,7 +655,7 @@
 
     }
 
-    .brandText strong{ font-family: "Instrument Serif", serif; font-size: 24px; font-weight: 400; letter-spacing: 0; }
+    .brandText strong{ font-family: "Instrument Serif", serif; font-size: 28px; font-weight: 400; letter-spacing: 0; }
 
     .brandText span{ font-size: 12px; color: var(--muted2); }
 
@@ -677,7 +677,7 @@
 
       display: flex;
 
-      gap: 8px;
+      gap: 18px;
 
       align-items: center;
 
@@ -789,13 +789,17 @@
 
       background: transparent;
 
-      color: var(--muted);
+      color: #000;
 
       font-family: "Shadows Into Light", cursive;
 
       font-size: 20px;
 
       line-height: 1;
+
+      text-decoration: none;
+
+      text-underline-offset: 4px;
 
       transition: transform .12s ease, color .12s ease;
 
@@ -807,7 +811,7 @@
 
       translate: 0 -1px;
 
-      color: var(--accent);
+      color: #a05f68;
 
       text-decoration: none;
 
@@ -815,7 +819,9 @@
 
     .pill.active{
 
-      color: var(--activeTabTx);
+      color: #000;
+
+      text-decoration: underline;
 
     }
 
@@ -2385,6 +2391,56 @@
 
 
 
+    #page-things .thingsContainer > div > .card.pad{
+
+      background: transparent;
+
+      border: 0;
+
+      box-shadow: none;
+
+      padding: 0;
+
+    }
+
+    #page-things .thingsContainer > div > .card.pad > h1,
+
+    #page-things .thingsContainer > div > .card.pad > p{
+
+      padding-left: 18px;
+
+      padding-right: 18px;
+
+    }
+
+    #page-things .thingsContainer > div > .card.pad > .divider{
+
+      display: none;
+
+    }
+
+    #page-things section[id^="things-"]{
+
+      background: var(--panel);
+
+      border: 1px solid var(--border);
+
+      box-shadow: var(--shadow);
+
+      padding: 18px;
+
+      margin-top: 18px;
+
+    }
+
+    #page-things section[id^="things-"] > .card.pad{
+
+      margin: 0;
+
+    }
+
+
+
     .sidebarScrollButtons {
 
       display: flex;
@@ -2467,7 +2523,7 @@
 
 
 
-<body class="landingMode landingIntroPlaying">
+<body class="landingMode">
 
   <header class="topbar">
 
@@ -2501,15 +2557,13 @@
 
         <nav class="nav visible" aria-label="Primary" id="nav">
 
-          <a class="pill active" href="#home1" data-route="home1">Home</a>
-
           <a class="pill" href="#home2" data-route="home2">About Me</a>
 
           <a class="pill" href="#cv" data-route="cv">CV</a>
 
           <a class="pill" href="#research" data-route="research">Research &amp; Publications</a>
 
-          <a class="pill" href="#things" data-route="things">Things I Love &amp; Beyond</a>
+          <a class="pill" href="#things" data-route="things">Things I Love</a>
 
           <a class="pill" href="#posts" data-route="posts">Posts</a>
 
@@ -2557,7 +2611,7 @@
 
           <a class="landingNavBtn" href="#cv" data-route="cv"><img class="landingNavIcon" alt="" src="https://github.com/nyotmanee/nyotmanee.github.io/blob/main/home%20button/book.png?raw=true" /><span>CV</span></a>
 
-          <a class="landingNavBtn" href="#research" data-route="research"><img class="landingNavIcon" alt="" src="https://github.com/nyotmanee/nyotmanee.github.io/blob/main/home%20button/flower.png?raw=true" /><span>Research</span></a>
+          <a class="landingNavBtn" href="#research" data-route="research"><img class="landingNavIcon" alt="" src="https://github.com/nyotmanee/nyotmanee.github.io/blob/main/home%20button/flower.png?raw=true" /><span>Research &amp; Publications</span></a>
 
         </nav>
 
@@ -2740,7 +2794,7 @@
 
           <span class="muted2"> · </span>
 
-          <a href="#things" data-route="things">Things I Love &amp; Beyond</a>
+          <a href="#things" data-route="things">Things I Love</a>
 
           <span class="muted2"> · </span>
 
@@ -3302,7 +3356,7 @@
 
           <span class="muted2"> · </span>
 
-          <a href="#things" data-route="things">Things I Love &amp; Beyond</a>
+          <a href="#things" data-route="things">Things I Love</a>
 
           <span class="muted2"> · </span>
 
@@ -3547,7 +3601,7 @@
 
           <span class="muted2"> · </span>
 
-          <a href="#things" data-route="things">Things I Love &amp; Beyond</a>
+          <a href="#things" data-route="things">Things I Love</a>
 
           <span class="muted2"> · </span>
 
@@ -3601,7 +3655,7 @@
 
           <div class="card pad">
 
-            <h1>Things I Love &amp; Beyond</h1>
+            <h1>Things I Love</h1>
 
             <p class="muted">A collection of the things that bring me joy!</p>
 
@@ -3976,7 +4030,7 @@
 
           <span class="muted2"> · </span>
 
-          <a href="#things" data-route="things">Things I Love &amp; Beyond</a>
+          <a href="#things" data-route="things">Things I Love</a>
 
           <span class="muted2"> · </span>
 
@@ -4508,7 +4562,7 @@
 
           <span class="muted2"> · </span>
 
-          <a href="#things" data-route="things">Things I Love &amp; Beyond</a>
+          <a href="#things" data-route="things">Things I Love</a>
 
           <span class="muted2"> · </span>
 
@@ -4614,7 +4668,7 @@
 
             <span class="muted2"> · </span>
 
-            <a href="#things" data-route="things">Things I Love &amp; Beyond</a>
+            <a href="#things" data-route="things">Things I Love</a>
 
             <span class="muted2"> · </span>
 
@@ -4724,11 +4778,17 @@
 
 
 
+    const landingIntroOverlay = document.querySelector(".landingIntroOverlay");
+
+    const shouldPlayLandingIntro = landingIntroOverlay && !sessionStorage.getItem("landingIntroPlayed") && (location.hash === "" || location.hash === "#home1");
+
+
+
     document.querySelectorAll(".typewriter[data-type-text]").forEach(typewriter => {
 
       const text = typewriter.dataset.typeText || "";
 
-      const delay = Number(typewriter.dataset.typeDelay || 0);
+      const delay = shouldPlayLandingIntro ? Number(typewriter.dataset.typeDelay || 0) : 0;
 
       typewriter.textContent = "";
 
@@ -4758,19 +4818,29 @@
 
 
 
-    const landingIntroOverlay = document.querySelector(".landingIntroOverlay");
-
     if (landingIntroOverlay) {
 
-      landingIntroOverlay.addEventListener("animationend", event => {
+      if (shouldPlayLandingIntro) {
 
-        if (event.animationName !== "landingSlideUp") return;
+        document.body.classList.add("landingIntroPlaying");
 
-        document.body.classList.remove("landingIntroPlaying");
+        landingIntroOverlay.addEventListener("animationend", event => {
+
+          if (event.animationName !== "landingSlideUp") return;
+
+          sessionStorage.setItem("landingIntroPlayed", "true");
+
+          document.body.classList.remove("landingIntroPlaying");
+
+          landingIntroOverlay.remove();
+
+        });
+
+      } else {
 
         landingIntroOverlay.remove();
 
-      });
+      }
 
     }
 
